@@ -60,7 +60,7 @@ parser.add_argument('--print-freq', '-p', default=10, type=int,
 parser.add_argument('--resume', default='', type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
 #./model/SOTA/ijba_res18_naive.pth.tar
-parser.add_argument('--pretrained', default='/home/DataBase4/sunpeiwen/RAN/FERplus_dir/pretrain/faces_emore_iresnet50/backbone.pth', type=str, metavar='PATH',
+parser.add_argument('--pretrained', default='', type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
 parser.add_argument('-e', '--evaluate', dest='evaluate', action='store_true',
                     help='evaluate model on validation set')
