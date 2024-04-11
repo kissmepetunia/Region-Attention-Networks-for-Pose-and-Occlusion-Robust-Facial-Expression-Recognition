@@ -34,7 +34,7 @@ model_names = sorted(name for name in models.__dict__
 current_time=time.strftime("%Y-%m-%d-%H:%M:%S", time.localtime())
 
 parser = argparse.ArgumentParser(description='PyTorch CelebA Training')
-parser.add_argument('--img_dir', metavar='DIR', default='./dataset/FERPlus_reshape_crop_folder/Train', help='path to dataset')
+parser.add_argument('--img_dir', metavar='DIR', default='/kaggle/input/ferplus/FER2013Plus/Images/FER2013Train', help='path to dataset')
 parser.add_argument('--arch', '-a', metavar='ARCH', default='iresnet50', choices=model_names,
                     help='model architecture: ' +
                         ' | '.join(model_names) +
@@ -77,7 +77,7 @@ def main():
     print(args)
     print("In tensorflow35 type \"tensorboard --logdir=/home/DataBase4/sunpeiwen/RAN/FERplus_dir/log/"+current_time+" \"")
     # pdb.set_trace()
-    args_img_dir='./dataset/FERPlus_reshape_crop_folder/Train'
+    args_img_dir='/kaggle/input/ferplus/FER2013Plus/Images/FER2013Train'
 
     train_list_file = './dataset/FERPlus_list/dlib_ferplus_train_center_crop_range_list.txt'
     train_label_file = './dataset/FERPlus_list/dlib_ferplus_train_center_crop_range_label.txt'
@@ -87,7 +87,7 @@ def main():
             transforms.Compose([caffe_crop,transforms.ToTensor()]))
 
     
-    args_img_dir_val='./dataset/FERPlus_reshape_crop_folder/Test'
+    args_img_dir_val='/kaggle/input/ferplus/FER2013Plus/Images/FER2013Test'
     train_loader = torch.utils.data.DataLoader(
         train_dataset,
         batch_size=args.batch_size, shuffle=True,
