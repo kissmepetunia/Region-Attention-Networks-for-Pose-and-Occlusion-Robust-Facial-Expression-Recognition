@@ -64,13 +64,13 @@ parser.add_argument('--pretrained', default='', type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
 parser.add_argument('-e', '--evaluate', dest='evaluate', action='store_true',
                     help='evaluate model on validation set')
-parser.add_argument('--model_dir','-m', default='/home/DataBase4/sunpeiwen/RAN/FERplus_dir/model/mytrain/'+current_time+os.sep, type=str)
+parser.add_argument('--model_dir','-m', default='/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/model/mytrain/'+current_time+os.sep, type=str)
 parser.add_argument('--end2end', default=True,
                     help='if true, using end2end with dream block, else, using naive architecture')
 
 best_prec1 = 0
 
-writer = SummaryWriter('/home/DataBase4/sunpeiwen/RAN/FERplus_dir/log/'+current_time)
+writer = SummaryWriter('/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/log/'+current_time)
 def main():
     global args, best_prec1
     args = parser.parse_args()
