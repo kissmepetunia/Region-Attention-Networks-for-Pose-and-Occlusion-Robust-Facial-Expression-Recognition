@@ -92,8 +92,8 @@ def folder_for_crop(db_folder, result_folder, crop_size):
 
 def run():
     list_file=["FER2013Test","FER2013Train","FER2013Valid"]
-    db_folder = ""
-    result_folder = ""
+    db_folder = "/kaggle/input/ferplus/FER2013Plus/Images"
+    result_folder = "/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/dataset/FERPlus_crop"
     folder_for_crop(db_folder, result_folder, (224, 224))
     
 if __name__ == "__main__":
