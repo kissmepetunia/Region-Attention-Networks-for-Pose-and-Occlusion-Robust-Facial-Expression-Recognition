@@ -75,7 +75,7 @@ def file2folder_copy(pic_file_path,pic_output_path):
 
 
 import threading
-overall_pic_path="./FERPlus/data"
+overall_pic_path="/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/dataset/FERPlus_crop"
 overall_output_path="./FERPlus_reshape_crop_folder"
 idx=0
 t=[]
