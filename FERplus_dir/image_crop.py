@@ -12,7 +12,7 @@ from PIL import Image
 
 # Dlib 预测器
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('/home/DataBase4/sunpeiwen/ODS_group/model/shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('/kaggle/input/shape-predictor/shape_predictor_68_face_landmarks.dat')
 
 def crop_from_image(src_file, des_file, crop_size):
     img = cv2.imread(src_file)  
@@ -92,8 +92,8 @@ def folder_for_crop(db_folder, result_folder, crop_size):
 
 def run():
     list_file=["FER2013Test","FER2013Train","FER2013Valid"]
-    db_folder = "/home/DataBase3/sunpeiwen/RAN/FERplus_dir/dataset/FERPlus/data"
-    result_folder = "/home/DataBase3/sunpeiwen/RAN/FERplus_dir/dataset/FERPlus_crop"
+    db_folder = ""
+    result_folder = ""
     folder_for_crop(db_folder, result_folder, (224, 224))
     
 if __name__ == "__main__":
