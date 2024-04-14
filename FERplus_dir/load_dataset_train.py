@@ -34,6 +34,9 @@ def load_imgs(img_dir, image_list_file, label_file):
                 
                 video_path = os.path.join(img_dir, video_name)# video_path is the path of each video
                 ###  for sampling triple imgs in the single video_path  ####
+
+                if not op.path.exist(video):
+                    continue
                 
                 img_lists = listdir(video_path)
                 # pdb.set_trace()
