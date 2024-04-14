@@ -25,7 +25,7 @@ import numpy as np
 import pdb
 import time
 from torch.utils.tensorboard import SummaryWriter
-os.environ['CUDA_VISIBLE_DEVICES'] = '2,3,4'
+#os.environ['CUDA_VISIBLE_DEVICES'] = '2,3,4'
 
 model_names = sorted(name for name in models.__dict__
     if name.islower() and not name.startswith("__")
