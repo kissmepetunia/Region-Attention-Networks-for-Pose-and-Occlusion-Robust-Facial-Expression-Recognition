@@ -193,7 +193,7 @@ def main():
         return
 
     for epoch in range(args.start_epoch, args.epochs):
-        adjust_learning_rate_fixed(optimizer, epoch)
+        adjust_learning_rate_proportion(optimizer, epoch)
         writer.add_scalar("learning rate",optimizer.state_dict()['param_groups'][0]['lr'],epoch)
         # train for one epoch
         train(train_loader, model, criterion, criterion1, optimizer, epoch)
