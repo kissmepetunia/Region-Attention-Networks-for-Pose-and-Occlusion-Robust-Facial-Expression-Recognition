@@ -26,17 +26,17 @@ def crop5region(pic_path,crop_save_path):
     top_y,top_x=img.shape[0],img.shape[1]
     
     whole_cropped = img
-    whole_cropped = cv2.resize(whole_cropped,(224,224))
+    whole_cropped = cv2.resize(whole_cropped,(128,128))
     top_left_cropped = img[0:round(top_y*0.75), 0:round(top_x*0.75)] # 裁剪坐标为[y0:y1, x0:x1]
-    top_left_cropped = cv2.resize(top_left_cropped,(224,224))
+    top_left_cropped = cv2.resize(top_left_cropped,(128,128))
     top_right_cropped = img[0:round(top_y*0.75), round(0.25*top_x):top_x] # 裁剪坐标为[y0:y1, x0:x1]
-    top_right_cropped = cv2.resize(top_right_cropped,(224,224))
+    top_right_cropped = cv2.resize(top_right_cropped,(128,128))
     center_down_cropped = img[round(0.25*top_y):top_y,round(0.125*top_x):round(0.875*top_x)] # 裁剪坐标为[y0:y1, x0:x1]
-    center_down_cropped = cv2.resize(center_down_cropped,(224,224))
+    center_down_cropped = cv2.resize(center_down_cropped,(128,128))
     center_big_cropped = img[round(0.05*top_y):round(0.95*top_y), round(0.05*top_x):round(0.95*top_x)] # 裁剪坐标为[y0:y1, x0:x1]
-    center_big_cropped = cv2.resize(center_big_cropped,(224,224))
+    center_big_cropped = cv2.resize(center_big_cropped,(128,128))
     center_small_cropped = img[round(0.075*top_y):round(0.925*top_y), round(0.075*top_x):round(0.925*top_x)] # 裁剪坐标为[y0:y1, x0:x1]
-    center_small_cropped = cv2.resize(center_small_cropped,(224,224))
+    center_small_cropped = cv2.resize(center_small_cropped,(128,128))
     
 #     plt.imshow(top_left_cropped)
 #     plt.show()
@@ -75,8 +75,8 @@ def file2folder_copy(pic_file_path,pic_output_path):
 
 
 import threading
-overall_pic_path="/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/dataset/FERPlus_crop"
-overall_output_path="./FERPlus_reshape_crop_folder"
+overall_pic_path="/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/dataset/FERPlus_crop_1"
+overall_output_path="./FERPlus_reshape_crop_folder_1"
 idx=0
 t=[]
 for folder in os.listdir(overall_pic_path):
