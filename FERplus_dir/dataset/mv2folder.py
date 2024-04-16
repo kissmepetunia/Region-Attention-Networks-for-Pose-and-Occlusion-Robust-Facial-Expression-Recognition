@@ -75,8 +75,8 @@ def file2folder_copy(pic_file_path,pic_output_path):
 
 
 import threading
-overall_pic_path="/kaggle/input/crop128/FERPlus_crop_1"
-overall_output_path="./FERPlus_reshape_crop_folder_1"
+overall_pic_path="/kaggle/input/crop48/FERPlus_crop_48"
+overall_output_path="./FERPlus_reshape_crop_folder_48"
 idx=0
 t=[]
 for folder in os.listdir(overall_pic_path):
