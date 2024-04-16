@@ -77,7 +77,7 @@ def main():
     print(args)
     print("In tensorflow35 type \"tensorboard --logdir=/home/DataBase4/sunpeiwen/RAN/FERplus_dir/log/"+current_time+" \"")
     # pdb.set_trace()
-    args_img_dir='/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/dataset/FERPlus_reshape_crop_folder_1/Train'
+    args_img_dir='/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/dataset/FERPlus_reshape_crop_folder_48/Train'
 
     train_list_file = './dataset/FERPlus_list/dlib_ferplus_train_center_crop_range_list.txt'
     train_label_file = './dataset/FERPlus_list/dlib_ferplus_train_center_crop_range_label.txt'
@@ -87,7 +87,7 @@ def main():
             transforms.Compose([caffe_crop,transforms.ToTensor()]))
 
     
-    args_img_dir_val='/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/dataset/FERPlus_reshape_crop_folder_1/Test'
+    args_img_dir_val='/kaggle/working/Region-Attention-Networks-for-Pose-and-Occlusion-Robust-Facial-Expression-Recognition/FERplus_dir/dataset/FERPlus_reshape_crop_folder_48/Test'
     train_loader = torch.utils.data.DataLoader(
         train_dataset,
         batch_size=args.batch_size, shuffle=True,
